@@ -1,0 +1,246 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	background-image: url('../images/background.jpg'); /* Path adjusted based on your directory structure */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed; /* Keeps the background fixed as user scrolls */
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for header */
+	padding: 1rem;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+
+.logo a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+
+nav ul li {
+	margin-right: 1rem;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+main {
+	padding-top: 4rem; /* Ensures content doesn't get hidden under fixed header */
+}
+
+section {
+	padding: 4rem 1rem;
+	text-align: center;
+	color: #fff;
+}
+
+section h1, section h2 {
+	margin-bottom: 1rem;
+}
+
+section p {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+}
+
+.section-title {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+.cta-buttons {
+	margin-top: 2rem;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.8rem 1.5rem;
+	margin-right: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #007bff; /* Bootstrap primary color */
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btn-secondary {
+	background-color: #6c757d; /* Bootstrap secondary color */
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.social-links {
+	margin-top: 2rem;
+}
+
+.social-links a {
+	font-size: 1.5rem;
+	margin-right: 1rem;
+	color: #fff;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	opacity: 0.8;
+}
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.skill-category {
+	background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for skill categories */
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+
+.skill-category h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.skill-category ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.skill-category ul li {
+	margin-bottom: 0.5rem;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.project-card {
+	background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for project cards */
+	padding: 1.5rem;
+	border-radius: 8px;
+}
+
+.project-card h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.project-card p {
+	margin-bottom: 1rem;
+}
+
+footer {
+	background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for footer */
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+@media (max-width: 768px) {
+	/* Responsive adjustments */
+	header {
+		padding: 0.5rem;
+	}
+	.logo {
+		font-size: 1.2rem;
+	}
+	nav ul {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 1rem;
+	}
+	nav ul li {
+		margin-bottom: 0.5rem;
+	}
+	main {
+		padding-top: 3rem;
+	}
+	section {
+		padding: 3rem 1rem;
+	}
+	.skills-grid, .project-grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+	.project-card, .skill-category {
+		padding: 1rem;
+	}
+}

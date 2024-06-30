@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DESIREDDY SAI SANKEERTHANA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">DESIREDDY SAI SANKEERTHANA</a></div>
+            <ul>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> sankeerthana.d8@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +1(716) 808-4030</p>
+                <p><i class="fas fa-map-marker-alt"></i> Buffalo, NY</p>
+            </div>
+            <button id="getInTouch" class="btn btn-primary">Get in Touch</button>
+            <form id="contactForm" style="display: none;">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="submissionMessage" style="display: none;">
+                <p>Thank you for your message. Please reach me at: sankeerthana.d8@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DESIREDDY SAI SANKEERTHANA. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        document.getElementById('getInTouch').addEventListener('click', function() {
+            document.getElementById('contactForm').style.display = 'block';
+            this.style.display = 'none';
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            // In a real scenario, you'd send this data to a server
+            // For this example, we'll just log it to the console
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Phone:', phone);
+
+            // Hide the form and show the submission message
+            this.style.display = 'none';
+            document.getElementById('submissionMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
